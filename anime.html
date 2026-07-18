@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime Detail — JjooooNime</title>
+  <meta name="description" content="Watch anime details, episodes, and stream online on JjooooNime.">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body data-page="anime">
+  <div class="top-loader"></div>
+
+  <!-- Navbar (same as index) -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </div>
+        <span class="text-gradient">JjooooNime</span>
+      </a>
+      <div class="nav-links">
+        <a href="/" class="nav-link">Home</a>
+        <a href="/schedule.html" class="nav-link">Schedule</a>
+        <a href="/search.html" class="nav-link">Genres</a>
+        <a href="/history.html" class="nav-link">History</a>
+        <a href="/bookmark.html" class="nav-link">Bookmarks</a>
+      </div>
+      <div class="nav-actions">
+        <button class="nav-btn search-btn" aria-label="Search">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        </button>
+        <a href="/bookmark.html" class="nav-btn bookmark-btn" aria-label="Bookmarks">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>
+          <span class="badge"></span>
+        </a>
+        <a href="/history.html" class="nav-btn" aria-label="History">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+        </a>
+        <button class="nav-btn mobile-menu-btn" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Search Overlay -->
+  <div class="search-overlay">
+    <button class="search-close">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="search-box">
+      <div class="search-input-wrapper">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+        <input type="text" class="search-input" placeholder="Search anime..." autocomplete="off">
+      </div>
+    </div>
+    <div class="search-results"></div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu">
+    <div class="mobile-menu-backdrop"></div>
+    <div class="mobile-menu-panel">
+      <div class="mobile-menu-header">
+        <a href="/" class="logo">
+          <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="text-gradient">JjooooNime</span>
+        </a>
+        <button class="mobile-menu-close">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="mobile-menu-links">
+        <a href="/" class="mobile-menu-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home</a>
+        <a href="/schedule.html" class="mobile-menu-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>Schedule</a>
+        <a href="/search.html" class="mobile-menu-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>Search</a>
+        <a href="/history.html" class="mobile-menu-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>History</a>
+        <a href="/bookmark.html" class="mobile-menu-link"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"></path></svg>Bookmarks</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="page-content">
+    <!-- Anime Detail Hero -->
+    <div class="anime-detail-hero" id="anime-hero">
+      <div class="anime-detail-bg">
+        <img src="" alt="" id="detail-bg-img">
+      </div>
+      <div class="container">
+        <div class="anime-detail-content" id="detail-content">
+          <!-- Loading State -->
+          <div class="anime-detail-poster">
+            <div class="skeleton skeleton-poster" style="aspect-ratio:2/3"></div>
+          </div>
+          <div class="anime-detail-info">
+            <div class="skeleton skeleton-text" style="height:36px;width:70%"></div>
+            <div class="skeleton skeleton-text" style="height:20px;width:40%"></div>
+            <div class="skeleton skeleton-text" style="height:20px;width:60%"></div>
+            <div class="skeleton skeleton-text" style="height:80px;width:100%"></div>
+            <div class="skeleton skeleton-text" style="height:40px;width:50%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Episode List -->
+    <section class="section">
+      <div class="container">
+        <div class="episode-list" id="episode-list">
+          <div class="episode-list-header">
+            <h3 class="episode-list-title">Episodes</h3>
+          </div>
+          <div class="episode-grid" id="episode-grid">
+            <!-- Loading -->
+            <div class="episode-item skeleton" style="height:40px"></div>
+            <div class="episode-item skeleton" style="height:40px"></div>
+            <div class="episode-item skeleton" style="height:40px"></div>
+            <div class="episode-item skeleton" style="height:40px"></div>
+            <div class="episode-item skeleton" style="height:40px"></div>
+            <div class="episode-item skeleton" style="height:40px"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendations -->
+    <section class="section" id="recommendations-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+            Recommended
+          </h2>
+        </div>
+        <div class="card-grid" id="recommendations-grid">
+          <div class="anime-card"><div class="card-poster skeleton skeleton-poster"></div><div class="card-info"><div class="skeleton skeleton-text"></div></div></div>
+          <div class="anime-card"><div class="card-poster skeleton skeleton-poster"></div><div class="card-info"><div class="skeleton skeleton-text"></div></div></div>
+          <div class="anime-card"><div class="card-poster skeleton skeleton-poster"></div><div class="card-info"><div class="skeleton skeleton-text"></div></div></div>
+          <div class="anime-card"><div class="card-poster skeleton skeleton-poster"></div><div class="card-info"><div class="skeleton skeleton-text"></div></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="logo">
+          <div class="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+          </div>
+          <span class="text-gradient">JjooooNime</span>
+        </a>
+        <p class="footer-desc">Premium anime streaming platform.</p>
+      </div>
+      <div><h4 class="footer-title">Navigation</h4><div class="footer-links"><a href="/">Home</a><a href="/ongoing.html">Ongoing</a><a href="/completed.html">Completed</a></div></div>
+      <div><h4 class="footer-title">Discover</h4><div class="footer-links"><a href="/search.html">Genres</a><a href="/bookmark.html">Bookmarks</a><a href="/history.html">History</a></div></div>
+    </div>
+    <div class="footer-bottom"><p class="footer-copyright"> 2026 JjooooNime. All rights reserved.</p></div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    async function initAnimePage() {
+      const params = new URLSearchParams(window.location.search);
+      const animeId = params.get('id');
+
+      if (!animeId) {
+        window.location.href = '/';
+        return;
+      }
+
+      UI.showLoader();
+
+      try {
+        const data = await API.anime(animeId);
+        const anime = data.data;
+
+        if (!anime) {
+          document.getElementById('detail-content').innerHTML = UI.createEmptyState(
+            ICONS.alertCircle,
+            'Anime Not Found',
+            'The anime you are looking for does not exist.',
+            { href: '/', text: 'Go Home' }
+          );
+          return;
+        }
+
+        // Save to recently viewed
+        Store.setContinueWatching({
+          animeId: anime.animeId,
+          title: anime.title,
+          poster: anime.poster,
+          href: `/anime.html?id=${anime.animeId}`,
+          timestamp: Date.now()
+        });
+
+        // Update page title
+        document.title = `${anime.title} — JjooooNime`;
+
+        // Render detail
+        const isBookmarked = Store.isBookmarked(anime.animeId);
+        const bookmarkIcon = isBookmarked ? ICONS.bookmarkFilled : ICONS.bookmark;
+
+        document.getElementById('detail-bg-img').src = anime.poster;
+        document.getElementById('detail-bg-img').alt = anime.title;
+
+        const synopsisHtml = anime.synopsis?.paragraphs?.length > 0 
+          ? anime.synopsis.paragraphs.map(p => `<p>${p}</p>`).join('')
+          : '<p>No synopsis available.</p>';
+
+        const genresHtml = anime.genreList?.map(g => 
+          `<a href="/search.html?genre=${g.genreId}" class="genre-tag">${g.title}</a>`
+        ).join('') || '';
+
+        const firstEpisode = anime.episodeList?.[anime.episodeList.length - 1];
+        const watchHref = firstEpisode ? `/watch.html?id=${firstEpisode.episodeId}` : '#';
+
+        document.getElementById('detail-content').innerHTML = `
+          <div class="anime-detail-poster">
+            <img src="${anime.poster}" alt="${anime.title}">
+          </div>
+          <div class="anime-detail-info">
+            <h1 class="anime-detail-title">${anime.title}</h1>
+            ${anime.japanese ? `<p class="anime-detail-japanese">${anime.japanese}</p>` : ''}
+            <div class="anime-detail-meta">
+              ${anime.score ? `<span class="anime-detail-meta-item">${ICONS.star} ${anime.score}</span>` : ''}
+              ${anime.type ? `<span class="anime-detail-meta-item">${ICONS.tv} ${anime.type}</span>` : ''}
+              ${anime.episodes ? `<span class="anime-detail-meta-item">${ICONS.film} ${anime.episodes} EPS</span>` : ''}
+              ${anime.duration ? `<span class="anime-detail-meta-item">${ICONS.clock} ${anime.duration}</span>` : ''}
+              ${anime.studios ? `<span class="anime-detail-meta-item">${ICONS.info} ${anime.studios}</span>` : ''}
+              ${anime.aired ? `<span class="anime-detail-meta-item">${ICONS.calendar} ${anime.aired}</span>` : ''}
+            </div>
+            <div class="anime-detail-genres">${genresHtml}</div>
+            <div class="anime-detail-synopsis">${synopsisHtml}</div>
+            <div class="anime-detail-actions">
+              <a href="${watchHref}" class="btn btn-primary btn-lg">
+                ${ICONS.play} Watch Now
+              </a>
+              <button class="btn btn-secondary btn-lg" onclick="toggleBookmark('${anime.animeId}', '${anime.title.replace(/'/g, "\'")}', '${anime.poster}')">
+                <span id="bookmark-icon">${bookmarkIcon}</span>
+                <span id="bookmark-text">${isBookmarked ? 'Bookmarked' : 'Bookmark'}</span>
+              </button>
+              ${anime.batch ? `<a href="/batch.html?id=${anime.batch}" class="btn btn-secondary btn-lg">${ICONS.download} Batch</a>` : ''}
+            </div>
+          </div>
+        `;
+
+        // Render episodes
+        const episodeGrid = document.getElementById('episode-grid');
+        if (episodeGrid && anime.episodeList) {
+          const history = Store.getHistory();
+          episodeGrid.innerHTML = [...anime.episodeList].reverse().map(ep => {
+            const isWatched = history.some(h => h.episodeId === ep.episodeId);
+            return `
+              <a href="/watch.html?id=${ep.episodeId}" 
+                 class="episode-item ${isWatched ? 'watched' : ''}"
+                 data-episode-id="${ep.episodeId}">
+                EP ${ep.eps}
+              </a>
+            `;
+          }).join('');
+        }
+
+        // Render recommendations
+        const recGrid = document.getElementById('recommendations-grid');
+        if (recGrid && anime.recommendedAnimeList) {
+          recGrid.innerHTML = anime.recommendedAnimeList.map(a => UI.createAnimeCard(a)).join('');
+        }
+
+      } catch (err) {
+        console.error('Anime detail error:', err);
+        UI.toast('Failed to load anime details', 'error');
+      } finally {
+        UI.hideLoader();
+      }
+    }
+
+    function toggleBookmark(animeId, title, poster) {
+      const isBookmarked = Store.isBookmarked(animeId);
+      if (isBookmarked) {
+        Store.removeBookmark(animeId);
+        document.getElementById('bookmark-icon').innerHTML = ICONS.bookmark;
+        document.getElementById('bookmark-text').textContent = 'Bookmark';
+        UI.toast('Removed from bookmarks', 'info');
+      } else {
+        Store.addBookmark({ animeId, title, poster, href: `/anime.html?id=${animeId}` });
+        document.getElementById('bookmark-icon').innerHTML = ICONS.bookmarkFilled;
+        document.getElementById('bookmark-text').textContent = 'Bookmarked';
+        UI.toast('Added to bookmarks', 'success');
+      }
+      updateBookmarkBadge();
+    }
+
+    initAnimePage();
+  </script>
+</body>
+</html>
